@@ -1,0 +1,85 @@
+name: "AzuraCast"
+version: "1.0.0"
+slug: "azuracast"
+description: "AzuraCast web radio management suite for Home Assistant"
+url: "https://github.com/roulianosss/azuracast-addon-ha"
+arch:
+  - aarch64
+  - amd64
+  - armv7
+startup: application
+boot: manual
+init: false
+ports:
+  80/tcp: 8080
+  443/tcp: 8443
+  8000/tcp: 8000
+  8005/tcp: 8005
+  8006/tcp: 8006
+  8010/tcp: 8010
+  8015/tcp: 8015
+  8020/tcp: 8020
+  8025/tcp: 8025
+  8030/tcp: 8030
+  8035/tcp: 8035
+  8040/tcp: 8040
+  8045/tcp: 8045
+  8050/tcp: 8050
+  8055/tcp: 8055
+  8060/tcp: 8060
+  8065/tcp: 8065
+  8070/tcp: 8070
+  8075/tcp: 8075
+  8080/tcp: 8080
+  8085/tcp: 8085
+  8090/tcp: 8090
+  8095/tcp: 8095
+  8100/tcp: 8100
+ports_description:
+  80/tcp: "Web interface (HTTP)"
+  443/tcp: "Web interface (HTTPS)"
+  8000/tcp: "Station 1 - Radio Port"
+  8005/tcp: "Station 1 - SFTP Port"
+  8006/tcp: "Station 1 - Station WebSocket Port"
+  8010/tcp: "Station 2 - Radio Port"
+  8015/tcp: "Station 2 - SFTP Port"
+  8016/tcp: "Station 2 - Station WebSocket Port"
+  8020/tcp: "Station 3 - Radio Port"
+  8025/tcp: "Station 3 - SFTP Port"
+  8030/tcp: "Station 4 - Radio Port"
+  8035/tcp: "Station 4 - SFTP Port"
+  8040/tcp: "Station 5 - Radio Port"
+  8045/tcp: "Station 5 - SFTP Port"
+  8050/tcp: "Station 6 - Radio Port"
+  8055/tcp: "Station 6 - SFTP Port"
+  8060/tcp: "Station 7 - Radio Port"
+  8065/tcp: "Station 7 - SFTP Port"
+  8070/tcp: "Station 8 - Radio Port"
+  8075/tcp: "Station 8 - SFTP Port"
+  8080/tcp: "Station 9 - Radio Port"
+  8085/tcp: "Station 9 - SFTP Port"
+  8090/tcp: "Station 10 - Radio Port"
+  8095/tcp: "Station 10 - SFTP Port"
+  8100/tcp: "Station 11 - Radio Port"
+host_network: false
+apparmor: false
+map:
+  - addon_config:rw
+  - ssl:ro
+options:
+  AZURACAST_HTTP_PORT: 80
+  AZURACAST_HTTPS_PORT: 443
+  LETSENCRYPT_ENABLE: false
+  MYSQL_ROOT_PASSWORD: ""
+  MYSQL_USER: "azuracast"
+  MYSQL_PASSWORD: ""
+  MYSQL_DATABASE: "azuracast"
+schema:
+  AZURACAST_HTTP_PORT: port
+  AZURACAST_HTTPS_PORT: port
+  LETSENCRYPT_ENABLE: bool
+  MYSQL_ROOT_PASSWORD: password?
+  MYSQL_USER: str
+  MYSQL_PASSWORD: password?
+  MYSQL_DATABASE: str
+image: "ghcr.io/{arch}-azuracast-addon"

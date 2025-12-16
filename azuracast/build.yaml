@@ -1,0 +1,11 @@
+build_from:
+  aarch64: "ghcr.io/home-assistant/aarch64-base:3.19"
+  amd64: "ghcr.io/home-assistant/amd64-base:3.19"
+  armv7: "ghcr.io/home-assistant/armv7-base:3.19"
+labels:
+  org.opencontainers.image.title: "AzuraCast"
+  org.opencontainers.image.description: "AzuraCast web radio management suite for Home Assistant"
+  org.opencontainers.image.source: "https://github.com/julienortscheid/azuracast-addon-ha"
+  org.opencontainers.image.licenses: "MIT"
+args:
+  AZURACAST_VERSION: "latest"

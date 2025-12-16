@@ -1,0 +1,29 @@
+# Home Assistant Add-on specific
+.DS_Store
+*.log
+
+# Build artifacts
+build/
+*.tar
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+test/
+*.test
+
+# Temporary files
+tmp/
+temp/
+
+# Environment files with secrets
+.env.local
+secrets.yaml
+
+# Data directory (if testing locally)
+data/
